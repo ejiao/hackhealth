@@ -8,7 +8,7 @@ body {
 	
 input { 
 	background-color: rgba(255,255,255,0.2);
-	color: #dddddd;
+	color: rgba(255,255,255,0.7);
 	border-width: 0; 
 	border-radius: 10px; 
 	padding-left: 20px; 
@@ -53,7 +53,8 @@ hr {
 }
 #question { 
 	text-align: center;
-	color: #dddddd;
+	color: rgba(255,255,255,0.7);
+	vertical-align: middle; 
 }
 
 #short { 
@@ -68,3 +69,9 @@ hr {
 	vertical-align: middle;
 	display: table-cell;
 }
+
+
+
+
+
+
