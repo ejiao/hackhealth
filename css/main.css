@@ -57,6 +57,14 @@ hr {
 	vertical-align: middle; 
 }
 
+#disclaimer {
+	position: fixed;
+	bottom: 5%;
+	font-size: 25pt; 
+	color: rgba(255,255,255,0.6);;
+
+}
+
 #short { 
 	font-size: 75pt; 
 }
