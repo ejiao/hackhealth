@@ -18,7 +18,7 @@ $(document).ready(function(){
 			        $("body").animate({
 			        	backgroundColor: "#FFC914" // yellow
 					}, 400, function() {
-					    
+					    // Animation complete.
 					});
 			        break;
 			    case 2: 
@@ -26,7 +26,7 @@ $(document).ready(function(){
 			    	$("body").animate({
 			        	backgroundColor: "#FF6700" // orange
 					}, 400, function() {
-					   
+					   // Animation complete.
 					}); 
 			    	break;
 			    case 3: 
@@ -34,7 +34,7 @@ $(document).ready(function(){
 			    	$("body").animate({
 			        	backgroundColor: "#D72638" // red 
 					}, 400, function() {
-					    
+					    // Animation complete.
 					}); 
 			    	break;
 			    case 4: 
@@ -42,15 +42,21 @@ $(document).ready(function(){
 			    	$("body").animate({
 			        	backgroundColor: "#FFC914" // yellow
 					}, 400, function() {
-					    
+					    // Animation complete.
 					}); 
 			    	break;
 			    default:
 			        $("#short").html("not found"); 
+			        $("body").animate({
+			        	backgroundColor: "#333333" // black
+					}, 400, function() {
+					    // Animation complete.
+					}); 
 			}
 		  $("input[type=text]").val(data.drugName); 
 		  $("#long").html(data.longAnswer);
 		  $("#answer").fadeIn();
+		  console.out("submit button");
 		});
 	}
 
@@ -61,5 +67,5 @@ $(document).ready(function(){
 	    }
 	});
 
-	$("#submit").on("click", submit());
+	$("#submit").on("click", submit);
 });
