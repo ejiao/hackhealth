@@ -1,12 +1,6 @@
 $(document).ready(function(){
-	$("input[type=text]").keypress(function(e) {
-		// if the key pressed is the enter key
-		if (e.which == 13) {
-			submit(); 
-		}
-	});
-
-	$("#submit").on("click", function() {
+	
+	var submit = function() {
 		$("#answer").hide(); 
 		var medicine = $("input[type=text]").val(); 
 		$.get( "https://hackahackahack.herokuapp.com/lookup?drug=" + medicine , function( data ) {
@@ -58,5 +52,14 @@ $(document).ready(function(){
 		  $("#long").html(data.longAnswer);
 		  $("#answer").fadeIn();
 		});
+	}
+
+	$("input").keypress(function(event) {
+	    if (event.which == 13) {
+	        event.preventDefault();
+	        submit();
+	    }
 	});
+
+	$("#submit").on("click", submit());
 });
